@@ -27,7 +27,8 @@ section .heading {
   height: 2px;
   background: #fff;
   margin: 0 auto;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+ }
 
 /*--------------------------------------------------------------
 PORTFOLIO
@@ -36,7 +37,9 @@ PORTFOLIO
   background-color: #33CC66; }
 
 #portfolio .heading h2 {
-  color: #fff; }
+  color: #fff;
+  margin-bottom: -5px;
+}
 
 #portfolio h3 {
   color: #fff;
