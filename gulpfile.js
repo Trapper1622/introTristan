@@ -44,15 +44,14 @@ gulp.task('reload', function() {
   browserSync.reload();
 });
 
-gulp.task('serve', ['sass'], function() {
+gulp.task('serve', function() {
   browserSync.init({
-    //proxy: "http://localhost:8090/bonGulp/src/"
-    //proxy: "http://localhost:8888/bonGulp/src/"
+    //proxy: "http://localhost:8090/projet1/src/"
     server: config.src
   });
 
-  gulp.watch([config.htmlin, config.phpin, config.jsin], ['reload']);
-  gulp.watch(config.scssin, ['sass']);
+  gulp.watch([config.htmlin, config.phpin, config.cssin, config.jsin], ['reload']);
+  // gulp.watch(config.cssin);
 });
 
 gulp.task('sass', function() {
@@ -119,10 +118,14 @@ gulp.task('babel', () =>
         .pipe(gulp.dest(config.jsout))
 );
 
-gulp.task('clean', function() {
-  return del([config.dist]);
-});
+// gulp.task('clean', function() {
+//   return del([config.dist]);
+// });
+//
+// gulp.task('build', function() {
+//   sequence('sass', 'babel', ['html', 'php', 'css', 'img']);
+// });
 
-gulp.task('build', function() {
-  sequence('sass', 'babel', ['html', 'php', 'css', 'img']);
-});
+// lancer gulp serve pour avoir la vu en direct a partir du repétoire src
+// lancer gulp buil pour que tout se mette dans le repertoire dist pour la publication
+// lancer gulp clean pour effacer le dossier dist !
