@@ -1,7 +1,5 @@
 body {
   font-family: 'lato', sans-serif;
-  position: relative;
-  overflow-y: scroll;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -47,6 +45,11 @@ PORTFOLIO
   color: #fff;
 }
 
+#portfolio h3 {
+  color: #fff;
+  text-align: center;
+}
+
 #portfolio .ligne-1 {
   margin-bottom: 30px;
 }
@@ -64,5 +67,5 @@ PORTFOLIO
 }
 
 #portfolio .colonne1 {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
